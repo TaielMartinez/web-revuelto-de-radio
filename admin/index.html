@@ -58,7 +58,7 @@
             $(document).ready(function() {
           $("#collapseEnviados").collapse("show")
           $.ajax({
-            url: "http://revueltoderadio.com/api/v1/events/modificar.php",
+            url: "../api/v1/events/modificar.php",
             method: "POST",
             data: {pass : pass, user: user}
           }).done(function(data) {

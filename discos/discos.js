@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     $.ajax({
-        //url: "http://revueltoderadio.com/api/v1/events",
         url: "../api/v1/discos",
         method: "GET",
     }).done(function(data) {
@@ -14,10 +13,12 @@ document.addEventListener('DOMContentLoaded', function() {
         for (let index = 0; index < data.length; index++) {
             let html = `
             <div class="card ml-5 mr-5 mt-5 mb-5" style="width: 13rem;">
+            <a href="../disco/?e=`+data[index].id+`" style="color: black">
             <img src="`+data[index].foto+`" alt="" style="width:100%">
             <div class="container_card text-center">
               <p>`+data[index].titulo+`</p>
             </div>
+            </a>
           </div>
             `;
 
@@ -31,6 +32,10 @@ document.addEventListener('DOMContentLoaded', function() {
         console.log(hemltRemoendados)
         $('.disco_propia').html(htmlPropia);
         $('.disco_recomendada').html(hemltRemoendados);
+
+        function click(id){
+            console.log(id)
+        }
 
     }).fail(function(){
     });

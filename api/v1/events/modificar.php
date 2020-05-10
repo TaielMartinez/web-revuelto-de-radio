@@ -146,7 +146,7 @@
                 $(document).ready(function() {
                     $("#collapseEnviados").collapse("show")
                         $.ajax({
-                            url: "http://revueltoderadio.com/api/v1/events/aceptar_rechazar.php",
+                            url: "../api/v1/events/aceptar_rechazar.php",
                             method: "POST",
                             data: {id : id, accion : accion}
                         }).done(function(data) {

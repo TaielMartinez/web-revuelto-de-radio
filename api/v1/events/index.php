@@ -11,7 +11,7 @@
     $json;
 
     while($row = $result->fetch_assoc()) {
-        $row['url'] = 'http://revueltoderadio.com/evento?e='.$row['id'];
+        $row['url'] = '../evento?e='.$row['id'];
         $json = $json.json_encode($row).',';
     }
 

@@ -5,7 +5,7 @@ console.log(id)
 
 
 $.ajax({
-    url: "http://revueltoderadio.com/api/v1/events/get_one.php",
+    url: "../api/v1/events/get_one.php",
     method: "POST",
     data: {id : id}
 }).done(function(data) {

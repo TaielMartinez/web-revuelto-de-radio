@@ -128,18 +128,6 @@ function comprobar_datos(){
         }
         console.log(informacion)
 
-/*
-    date       2020-03-08
-    url -        http://revueltoderadio.com/api/v1/ending.php
-    nombre      varchar(255)
-    lugar          https://www.google.com.ar/maps/place/Hierro+Celina/@-34.6938925,-58.4744191,15z
-    costo         ej 1: 600 (osea 600 pesos) o ej 2: "sobre" o ej 3: "gratis"      (en el fomulario da 3 opciones, ingresar valor o las opciones de al "sobre" y "gratis" estos textos son harcodeados)
-    foto            https://auth-db185.hostinger.com/themes/pmahomme/img/logo_left.png
-    facebook    https://www.facebook.com/events/528701001383165/
-    youtube      https://www.youtube.com/watch?v=nd3IKA3sBEk
-    hora             2019-02-23 20:02:21 (es un timestamp, pero los unicos valores que usamos son hora y minuto, osea 20:02, los otros pueden ser todos 0 y no pasa nada)
-*/
-
         $.ajax({
             data:  informacion,
             url:   '../api/v1/events/registro.php',

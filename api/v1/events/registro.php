@@ -2,7 +2,7 @@
 
 /*
     date       2020-03-08
-    url         http://revueltoderadio.com/api/v1/ending.php
+    url         nada
     nombre      varchar(255)
     lugar          https://www.google.com.ar/maps/place/Hierro+Celina/@-34.6938925,-58.4744191,15z
     costo         ej 1: 600 (osea 600 pesos) o ej 2: "sobre" o ej 3: "gratis"      (en el fomulario da 3 opciones, ingresar valor o las opciones de al "sobre" y "gratis" estos textos son harcodeados)

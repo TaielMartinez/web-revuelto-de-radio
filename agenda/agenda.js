@@ -1,10 +1,10 @@
 document.addEventListener('DOMContentLoaded', function() {
 
     $.ajax({
-        //url: "http://revueltoderadio.com/api/v1/events",
         url: "../api/v1/events",
         method: "GET",
     }).done(function(data) {
+        //console.log(data)
         let events = JSON.parse(data);
         console.log(events)
 
