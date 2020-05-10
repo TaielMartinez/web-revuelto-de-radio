@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="container mt-5" style="width: 50%;">
+        <div class="custom-file">
+            <input type="file" class="custom-file-input" id="imput_img" accept="image/*">
+            <label class="custom-file-label" for="imput_img">Buscar foto</label>
+        </div>
+        <p class="img_error" style="color: red; display: none;">Tamaño maximo 1MB</p>
+        <div class="col">
+            <img src="" class="imput_img_preview mt-3 mb-3" style="width: 180px; height: 180px;">
+            <textarea class="form-control" id="textarea" rows="3"></textarea>
+        </div>
+    </div>
+    
+
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+
+    <script>
+
+        function readFile(input) {
+            if (input.files && input.files[0]) {
+                if(input.files[0].size > 1000000){
+                    console.log('muy pesado')
+                    $('.img_error').css('display', 'block')
+                    return
+                } else {
+                    $('.img_error').css('display', 'none')
+                }
+                var reader = new FileReader();
+                
+                reader.onload = function (e) {
+                    $('.imput_img_preview').attr('src', e.target.result);
+                    $('#textarea').val(e.target.result);
+                    myFunction()
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+        var fileUpload = document.getElementById('imput_img');
+        fileUpload.onchange = function (e) {
+            readFile(e.srcElement);
+        }
+
+        function myFunction() {
+            var copyText = document.getElementById("textarea");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+        }
+
+    </script>
+</body>
+</html>

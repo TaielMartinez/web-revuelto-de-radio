@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publicar eventos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body style="background-color: #4f677f;">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container container_navbar">
+          <a class="navbar-brand" href="/"><img src="../img/navbar_img.png" width="180" height="50" alt=""></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample07" aria-controls="navbarsExample07" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+  
+          <div class="collapse navbar-collapse" id="navbarsExample07">
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="/">INICIO <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link" href="/agenda">AGENDA</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/discos">DISCOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/escuchanos">ESCUCHANOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/radios">RADIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/staff">STAFF</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/contacto">CONTACTO</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </nav>
+
+    <div class="container" style="margin-bottom: 120px; padding-top: 1rem;">
+        <div class="row">
+            <div class="col">
+                <div class="jumbotron" style="background-color:rgb(241, 241, 241); border-radius: 0; text-align: center; border-radius: 10px;">
+                    <form action=""> 
+    
+                
+                    <h3>Para aparecer en la agenda, completa los campos del formulario y en breve revisaremos tu solicitud</h3>
+                    <hr class="display-4">
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Nombre del evento<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control input_nombre" name="nombre" maxlength="254">
+                            
+                        </div>
+                    </div>
+    
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Lugar del evento<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control input_ubicacion" name="ubicacion" maxlength="254">
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Direccion del lugar<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6">
+                            <input type="text" class="form-control input_direccion" name="direccion" maxlength="254">
+                        </div>
+                    </div>
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Hora y fecha del evento<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <input type="date" class="form-control input_fecha" name="fecha" maxlength="254">
+                        </div>
+                        <div class="col-6 col-sm-3">
+                            <input type="time" class="form-control input_hora" name="hora" maxlength="254">
+                        </div>
+                    </div>
+                    
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Costo<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-4 valor" >
+                            <div class="input-group mb-3 input_valor">
+                                <div class="pesos">
+                                    <input  type="number"  class="input_precios form-control input_dinero" name="" id="" placeholder="Valor en Pesos">
+                                </div>
+    
+                                <div class="gratis" style="display: none;">
+                                    <input  type="number"  class="input_precios form-control" name="" id="" placeholder="Valor sobre/gratis" disabled>
+                                </div>
+                            </div>
+    
+    
+                        </div>
+                        <div class="col-2">
+                            <select class="form-control input_precios" id="input_tipo_dinero" name="costo">
+                                <option value=1 selected>Dinero</option>
+                                <option value=2>Sobre</option>
+                                <option value=3>Gratis</option>
+                              </select>
+                        </div>
+                        
+                    </div>
+
+                     <!--  -->
+                     <br>
+                     <div class="row" style="text-align: center;">
+                         <div class="col-5">
+                             <h3>Link para Reservar:</h3>
+                         </div>
+                         <div class="col-6">
+                             <input type="url" class="form-control input_reserva" name="eserva" maxlength="254">
+                         </div>
+                     </div>
+    
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Evento de Facebook:</h3>
+                        </div>
+                        <div class="col-6">
+                            <input type="url" class="form-control input_facebook" name="facebook" maxlength="254">
+                        </div>
+                    </div>
+    
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Link de Youtube:</h3>
+                        </div>
+                        <div class="col-6">
+                            <input type="url" class="form-control input_youtube" name="Youtube" maxlength="254">
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Link de Spotify:</h3>
+                        </div>
+                        <div class="col-6">
+                            <input type="url" class="form-control input_spotify" name="Spotify" maxlength="254">
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Artistas y/o Músicos<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6">
+                            <textarea class="form-control input_artistas" id="form-control" rows="2" maxlength="300"></textarea>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <br>
+                    <div class="row" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Breve Descripción<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6">
+                            <textarea class="form-control input_descripcion" id="form-control" rows="4" maxlength="998"></textarea>
+                        </div>
+                    </div>
+
+                    <!--  -->
+                    <div class="row mt-4" style="text-align: center;">
+                        <div class="col-5">
+                            <h3>Foto cuadrada<span style="color: #ff0000">*</span>:</h3>
+                        </div>
+                        <div class="col-6">
+                            <div class="row">
+                                <div class="col-6">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="imput_img" accept="image/*">
+                                        <label class="custom-file-label" for="imput_img">Buscar foto</label>
+                                    </div>
+                                    <p class="img_error" style="color: red; display: none;">Tamaño maximo 1MB</p>
+                                </div>
+                                <div class="col">
+                                    <img src="" class="imput_img_preview mt-3 mb-3" style="width: 180px; height: 180px;">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- 
+                    <br>
+                    <div class="row" style="text-align: center;" *ngIf="errorMensajeBool">
+                    <div class="col col-sm-6 alert alert-danger" style="text-align: center; margin: 0 auto;">
+                    <h1>{{errorMensaje}}</h1>
+                    </div>
+                    </div>
+                    <br>
+                    -->
+                    <button type="button" class="btn btn-success enviar">Enviar a revision</button>
+                    
+                </form>
+                </div> 
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js" integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm" crossorigin="anonymous"></script>
+    <script src="publicar.js"></script>
+</body>
+</html>
